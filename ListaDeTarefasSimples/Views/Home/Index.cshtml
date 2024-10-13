@@ -1,10 +1,10 @@
 ﻿@model HomeControllerViewModel
 
-<div class="container">
+<div class="container" style="font-family: 'Helvetica', sans-serif;">
     <div row="row">
-        <h1 class="mb-4">Lista de Tarefas</h1>
+        <h4 class="mb-2">Lista de Tarefas</h4>
 
-        <form asp-action="Criar" method="post" class="mb-4">
+        <form asp-action="Criar" method="post" class="mb-2">
             <input class="form-control" type="text" name="Tarefa" placeholder="Descrição da tarefa" required />
             <button class="btn btn-success mt-2" type="submit">Adicionar Tarefa</button>
         </form>
@@ -25,20 +25,30 @@
                 @foreach (var item in Model.Lista)
                 {
                     <tr>
-                        <td>@item.Status</td>
+                        <td>
+                            <form asp-action="Concluida" method="post" class="status-form" style="display:inline;">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                           type="checkbox"
+                                           asp-for="@item.Status"
+                                           onchange="this.form.submit();" />
+                                </div>
+                            </form>
+                        </td>
                         <td>@item.Tarefa</td>
                         <td>@item.Data</td>
                         <td>
-                            <form asp-action="Editar" method="post" class="mb-4">
+                            <form asp-action="Editar" method="post" class="d-flex">
                                 <input type="hidden" name="Id" value="@item.Id" />
-                                <button class="btn btn-primary mt-2 mb-1" type="submit">Editar</button>
+                                <button class="btn btn-primary me-2" type="submit">Editar</button>
                                 <input class="form-control" type="text" name="Tarefa" placeholder="Descrição da tarefa" required />
                             </form>
                         </td>
                         <td>
-                            <form asp-action="Remover" method="post" class="mb-4">
+                            <form asp-action="Remover" method="post" class="d-flex">
                                 <input type="hidden" name="id" value="@item.Id" />
-                                <button class="btn btn-danger mt-2" type="submit">Excluir</button>
+                                <button class="btn btn-danger me-2" type="submit">Excluir</button>
                             </form>
                         </td>
                     </tr>

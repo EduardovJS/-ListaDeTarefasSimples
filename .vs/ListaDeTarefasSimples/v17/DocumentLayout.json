@@ -28,9 +28,10 @@
               "RelativeDocumentMoniker": "ListaDeTarefasSimples\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Eduardo\\Desktop\\Projetos ASPNET\\ListaDeTarefasSimples\\ListaDeTarefasSimples\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "ListaDeTarefasSimples\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAkwCIAAAA/AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-13T13:29:42.37Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -45,7 +46,7 @@
               "RelativeDocumentMoniker": "ListaDeTarefasSimples\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Eduardo\\Desktop\\Projetos ASPNET\\ListaDeTarefasSimples\\ListaDeTarefasSimples\\Controllers\\HomeController.cs",
               "RelativeToolTip": "ListaDeTarefasSimples\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAIwD4AAAAJAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAcwEUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T13:27:01.097Z",
               "EditorCaption": ""

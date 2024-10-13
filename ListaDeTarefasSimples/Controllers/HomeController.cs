@@ -64,6 +64,19 @@ namespace ListaDeTarefasSimples.Controllers
             return View(tarefas);
         }
 
+        [HttpPost("Concluida")]
+        public IActionResult Concluida(int id)
+        {
+            var tarefa = _context.Tarefas.Find(id);
+            if (tarefa != null)
+            {
+                tarefa.Status = !tarefa.Status;
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return NotFound();
+        }
+
 
 
     }
