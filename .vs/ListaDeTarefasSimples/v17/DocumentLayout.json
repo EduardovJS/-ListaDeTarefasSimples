@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Eduardo\\Desktop\\Projetos ASPNET\\ListaDeTarefasSimples\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DDBC2B51-A7F1-4257-98D3-F332540D2ED0}|ListaDeTarefasSimples\\ListaDeTarefasSimples.csproj|c:\\users\\eduardo\\desktop\\projetos aspnet\\listadetarefassimples\\listadetarefassimples\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDBC2B51-A7F1-4257-98D3-F332540D2ED0}|ListaDeTarefasSimples\\ListaDeTarefasSimples.csproj|solutionrelative:listadetarefassimples\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DDBC2B51-A7F1-4257-98D3-F332540D2ED0}|ListaDeTarefasSimples\\ListaDeTarefasSimples.csproj|c:\\users\\eduardo\\desktop\\projetos aspnet\\listadetarefassimples\\listadetarefassimples\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DDBC2B51-A7F1-4257-98D3-F332540D2ED0}|ListaDeTarefasSimples\\ListaDeTarefasSimples.csproj|solutionrelative:listadetarefassimples\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDBC2B51-A7F1-4257-98D3-F332540D2ED0}|ListaDeTarefasSimples\\ListaDeTarefasSimples.csproj|c:\\users\\eduardo\\desktop\\projetos aspnet\\listadetarefassimples\\listadetarefassimples\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDBC2B51-A7F1-4257-98D3-F332540D2ED0}|ListaDeTarefasSimples\\ListaDeTarefasSimples.csproj|solutionrelative:listadetarefassimples\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Eduardo\\Desktop\\Projetos ASPNET\\ListaDeTarefasSimples\\ListaDeTarefasSimples\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "ListaDeTarefasSimples\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Eduardo\\Desktop\\Projetos ASPNET\\ListaDeTarefasSimples\\ListaDeTarefasSimples\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "ListaDeTarefasSimples\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACQAAAAdAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAkwCIAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-13T13:29:42.37Z",
               "EditorCaption": ""
@@ -39,13 +39,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Eduardo\\Desktop\\Projetos ASPNET\\ListaDeTarefasSimples\\ListaDeTarefasSimples\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "ListaDeTarefasSimples\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Eduardo\\Desktop\\Projetos ASPNET\\ListaDeTarefasSimples\\ListaDeTarefasSimples\\Controllers\\HomeController.cs",
               "RelativeToolTip": "ListaDeTarefasSimples\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowBkAAAAYAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAIwD4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T13:27:01.097Z",
               "EditorCaption": ""

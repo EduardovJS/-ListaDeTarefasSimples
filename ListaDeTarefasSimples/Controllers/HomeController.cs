@@ -44,10 +44,27 @@ namespace ListaDeTarefasSimples.Controllers
             if (tarefa != null)
             {
                 _context.Tarefas.Remove(tarefa);
-                _context.SaveChanges(); 
+                _context.SaveChanges();
                 return RedirectToAction("Index");
             }
             return NotFound();
         }
+
+        [HttpPost("Editar")]
+        public IActionResult Editar(Tarefas tarefas)
+        {
+            if (ModelState.IsValid)
+            {
+
+                _context.Tarefas.Update(tarefas);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+
+            }
+            return View(tarefas);
+        }
+
+
+
     }
 }

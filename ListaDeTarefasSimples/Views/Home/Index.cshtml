@@ -2,7 +2,7 @@
 
 <div class="container">
     <div row="row">
-        <h1 class="mb-4">Lista de Tarefas<small>@ViewBag.Timenow</small></h1>
+        <h1 class="mb-4">Lista de Tarefas</h1>
 
         <form asp-action="Criar" method="post" class="mb-4">
             <input class="form-control" type="text" name="Tarefa" placeholder="Descrição da tarefa" required />
@@ -28,7 +28,13 @@
                         <td>@item.Status</td>
                         <td>@item.Tarefa</td>
                         <td>@item.Data</td>
-                        <td>Editar</td>
+                        <td>
+                            <form asp-action="Editar" method="post" class="mb-4">
+                                <input type="hidden" name="Id" value="@item.Id" />
+                                <button class="btn btn-primary mt-2 mb-1" type="submit">Editar</button>
+                                <input class="form-control" type="text" name="Tarefa" placeholder="Descrição da tarefa" required />
+                            </form>
+                        </td>
                         <td>
                             <form asp-action="Remover" method="post" class="mb-4">
                                 <input type="hidden" name="id" value="@item.Id" />
@@ -38,19 +44,6 @@
                     </tr>
                 }
             </tbody>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </table>
     </div>
 </div>
