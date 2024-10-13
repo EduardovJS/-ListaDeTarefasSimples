@@ -29,7 +29,12 @@
                         <td>@item.Tarefa</td>
                         <td>@item.Data</td>
                         <td>Editar</td>
-                        <td>Excluir</td>
+                        <td>
+                            <form asp-action="Remover" method="post" class="mb-4">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button class="btn btn-danger mt-2" type="submit">Excluir</button>
+                            </form>
+                        </td>
                     </tr>
                 }
             </tbody>

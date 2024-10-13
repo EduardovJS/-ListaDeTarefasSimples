@@ -23,7 +23,7 @@ namespace ListaDeTarefasSimples.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        [HttpPost("Criar")]
         public IActionResult Criar(Tarefas tarefas)
         {
             if (ModelState.IsValid)
@@ -35,6 +35,19 @@ namespace ListaDeTarefasSimples.Controllers
 
             }
             return View(tarefas);
+        }
+
+        [HttpPost("Remover")]
+        public IActionResult Remover(int id)
+        {
+            var tarefa = _context.Tarefas.Find(id);
+            if (tarefa != null)
+            {
+                _context.Tarefas.Remove(tarefa);
+                _context.SaveChanges(); 
+                return RedirectToAction("Index");
+            }
+            return NotFound();
         }
     }
 }
