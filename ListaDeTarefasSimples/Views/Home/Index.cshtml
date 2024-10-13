@@ -1,8 +1,51 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model HomeControllerViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div row="row">
+        <h1 class="mb-4">Lista de Tarefas<small>@ViewBag.Timenow</small></h1>
+
+        <form asp-action="Criar" method="post" class="mb-4">
+            <input class="form-control" type="text" name="Tarefa" placeholder="Descrição da tarefa" required />
+            <button class="btn btn-success mt-2" type="submit">Adicionar Tarefa</button>
+        </form>
+
+        <table class="table table-bordered table-striped">
+            <!--Cabeçalho da tabela-->
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <!--Dados da tabela-->
+            <tbody>
+                @foreach (var item in Model.Lista)
+                {
+                    <tr>
+                        <td>@item.Status</td>
+                        <td>@item.Tarefa</td>
+                        <td>@item.Data</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                }
+            </tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
 </div>

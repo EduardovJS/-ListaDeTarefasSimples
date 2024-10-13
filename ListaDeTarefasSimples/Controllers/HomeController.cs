@@ -1,4 +1,6 @@
+using ListaDeTarefasSimples.Context;
 using ListaDeTarefasSimples.Models;
+using ListaDeTarefasSimples.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,27 +8,33 @@ namespace ListaDeTarefasSimples.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
-
         public IActionResult Index()
         {
-            return View();
+            var model = new HomeControllerViewModel
+            {
+                Lista = _context.Tarefas.ToList(),
+            };
+            return View(model);
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Criar(Tarefas tarefas)
         {
-            return View();
-        }
+            if (ModelState.IsValid)
+            {
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+                _context.Tarefas.Add(tarefas);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+
+            }
+            return View(tarefas);
         }
     }
 }
