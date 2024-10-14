@@ -1,7 +1,9 @@
 ﻿@model HomeControllerViewModel
-
 <div class="container" style="font-family: 'Helvetica', sans-serif;">
     <div row="row">
+        <div>
+            <h2>Data Atual: @ViewBag.DataAtual.ToString("dd/MM/yyyy HH:mm")</h2>
+        </div>
         <h4 class="mb-2">Lista de Tarefas</h4>
 
         <form asp-action="Criar" method="post" class="mb-2">

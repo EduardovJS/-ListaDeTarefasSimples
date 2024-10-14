@@ -16,6 +16,7 @@ namespace ListaDeTarefasSimples.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.DataAtual = DateTime.Now;
             var model = new HomeControllerViewModel
             {
                 Lista = _context.Tarefas.ToList(),
@@ -26,10 +27,13 @@ namespace ListaDeTarefasSimples.Controllers
         [HttpPost("Criar")]
         public IActionResult Criar(Tarefas tarefas)
         {
+             
+
             if (ModelState.IsValid)
             {
 
-                _context.Tarefas.Add(tarefas);
+                tarefas.Data = DateTime.Now;
+                _context.Tarefas.Add(tarefas);    
                 _context.SaveChanges();
                 return RedirectToAction("Index");
 
