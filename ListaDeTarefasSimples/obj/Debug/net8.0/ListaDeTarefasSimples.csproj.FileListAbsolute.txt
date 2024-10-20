@@ -141,3 +141,11 @@ C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSim
 C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\obj\Debug\net8.0\ListaDeTarefasSimples.pdb
 C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\obj\Debug\net8.0\ListaDeTarefasSimples.genruntimeconfig.cache
 C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\obj\Debug\net8.0\ref\ListaDeTarefasSimples.dll
+C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\bin\Debug\net8.0\ClosedXML.Parser.dll
+C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\bin\Debug\net8.0\RBush.dll
+C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Users\Eduardo\Desktop\Projetos ASPNET\ListaDeTarefasSimples\ListaDeTarefasSimples\bin\Debug\net8.0\System.IO.Packaging.dll

@@ -1,7 +1,10 @@
+using ClosedXML.Excel;
 using ListaDeTarefasSimples.Context;
 using ListaDeTarefasSimples.Models;
 using ListaDeTarefasSimples.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Diagnostics;
 
 namespace ListaDeTarefasSimples.Controllers
@@ -24,16 +27,57 @@ namespace ListaDeTarefasSimples.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public async Task<ActionResult> Exportar(string formato)
+        {
+            var tarefas = await _context.Tarefas.ToListAsync();
+
+            if (formato == "xlsx")
+            {
+                var nomeArquivo = $"Tarefas.xlsx";
+                return GerarExcel(nomeArquivo, tarefas);
+
+            }
+            return RedirectToAction("Index");
+        }
+
+        private FileResult GerarExcel(string nomeArquivo, IEnumerable<Tarefas> tarefas)
+        {
+            DataTable datatable = new DataTable("Tarefas");
+            datatable.Columns.AddRange(new DataColumn[] {
+                new DataColumn("Tarefa"),
+                new DataColumn("Data"),new DataColumn("Status"),
+                });
+
+            foreach (var tarefa in tarefas)
+            {
+                datatable.Rows.Add(tarefa.Tarefa,
+                    tarefa.Data, tarefa.Status);
+            }
+            using (XLWorkbook wb = new XLWorkbook())
+            {
+                wb.Worksheets.Add(datatable);
+
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(),
+                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        nomeArquivo);
+                }
+            }
+        }
+
         [HttpPost("Criar")]
         public IActionResult Criar(Tarefas tarefas)
         {
-             
+
 
             if (ModelState.IsValid)
             {
 
                 tarefas.Data = DateTime.Now;
-                _context.Tarefas.Add(tarefas);    
+                _context.Tarefas.Add(tarefas);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
 
@@ -80,6 +124,7 @@ namespace ListaDeTarefasSimples.Controllers
             }
             return NotFound();
         }
+
 
 
 
